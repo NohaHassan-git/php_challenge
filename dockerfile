@@ -1,7 +1,9 @@
-FROM php:7.4-apache
+FFROM php:7.4-apache
 
 COPY . /var/www/html/
 
-RUN chown -R www-data:www-data /var/www/html/uploads
+RUN mkdir -p /var/www/html/uploads \
+    && chown -R www-data:www-data /var/www/html/uploads
 
 EXPOSE 80
+
