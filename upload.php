@@ -1,5 +1,5 @@
 <?php
-$target_dir = "uploads/";
+$target_dir = "challenge_uploads/";
 if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
@@ -18,3 +18,4 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
     echo "Sorry, there was an error uploading your file.";
 }
 ?>
+
